@@ -104,7 +104,7 @@ for article_count, article_filename in enumerate(articles):
         skip_download = True
 
       # Get the image id, used to determine local filename
-      image_id = re.findall(r'\/(([^\/]*?)\.([a-z]+))$', image_server_url)[0][0]
+      image_id = re.findall(r'\/([^\/]+)$', image_server_url)[0]
 
       # Update the user
       progress_string = "[%i/%i] %s %s..." %\
